@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+  color: #111;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  border-radius: 12px;
+  border: none;
+  background: #fff;
+}
+.head {
+  height: 225px;
+  /*background: red;*/
+  width: 100%;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMXSRwEWBpybiN3lIFSS8_BhJd9EPHbiYf6A&usqp=CAU');
+  background-size: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.tail {
+  margin-top: 5px;
+  height: 70px;
+  width: 100%;
+  background: #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
