@@ -17,21 +17,24 @@ body {
 .card {
   width: 250px;
   height: 300px;
+  margin: 20px;
   border-radius: 12px;
   border: none;
   background: #fff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .head {
-  height: 225px;
+  height: 230px;
   /*background: red;*/
   width: 100%;
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMXSRwEWBpybiN3lIFSS8_BhJd9EPHbiYf6A&usqp=CAU');
+  
   background-size: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+
 .tail {
-  margin-top: 5px;
+  /*margin-top: 5px;*/
   height: 70px;
   width: 100%;
   background: #eee;
@@ -41,3 +44,39 @@ body {
   align-items: center;
   padding: 0 15px;
 }
+
+.name {
+  padding: 4px;
+  font-size: 1.3rem;
+  
+}
+.price {
+  padding: 4px;
+  font-size: 1.1rem;
+  background: #949DFF;
+  border-radius: 10px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 1rem;
+  background: #949DFF;
+  color: #fff;
+  margin-top: 22px;
+    
+}
+.product {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
