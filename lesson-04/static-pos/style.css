@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(23, 48, 50, 1);
+  color: #ffffff;
+  padding: 30px;
+  
+}
+
+.elem {
+  width: 338px;
+  margin: 40px 0px;
+}
+.elem > h1 {
+  font-size: 100px;
+  margin-bottom: -20px;
+}
+
+.elem > p {
+  margin-top: 0;
+  font-size: 17px;
+  text-align: justify;
+}
+
+.even {
+  margin: 40px 0px 40px 100px;
+}
+
+.third {
+  margin-left: 0px;
+}
