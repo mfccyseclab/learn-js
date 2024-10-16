@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidelity Login Page</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav>
+    <div class="brand">
+      <img src="assets/Fidelity-wordmark.svg" alt="Fidelity Logo" class="logo">
+    </div>
+    <ul class="menu">
+      <li>Security</li>
+      <li>FAQs</li>
+    </ul>
+  </nav>
+  
+  
+  
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Log in</h2>
+            <form method="post" action="handler/auth.php" id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group last-in">
+                    <input type="checkbox" id="check">
+                    <p>Remember my username</p>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn">Log In</button>
+                </div>
+                <div class="additional-links">
+                    <a href="#">Forgot your username or password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="out">
+      New to Fidelity? <a href="#">Open an account</a> or <a href="#">sign up</a>.
+    </div>
+    <div class="mobo-menu">
+      <a href="#">Security</a>
+      <a href="#">FAQs</a>
+    </div>
+</body>
+</html>
