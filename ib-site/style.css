@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dedede;
+}
+nav {
+  background: white;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+nav > .brand {
+  color: #73BAFF;
+}
+i {
+  font-size: 20px;
+}
+.hero {
+  /*background: red;*/
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.name {
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: 600;
+}
+.job {
+  font-size: 24px;
+}
+.hero > button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: #73BAFF;
+  color: #fff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+.hero > button:hover {
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1);
+  color: #73BAFF;
+  background: #fff;  
+}
+.about {
+  background: white;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+.about > div > h2 {
+  color: #73BAFF;
+}
+.obj {
+  font-size: 25px;
+  width: 50%;
+  padding: 20px;
+}
+.sum {
+  font-size: 23px;
+  width: 50%;
+  padding: 20px;
+}
