@@ -6,117 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Account Settings</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background: #E9E9E9;
-    }
-    nav {
-      height: 70px;
-      width: 100%;
-      background: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-    .fas, .brand {
-      font-size: 32px;
-    }
-    .brand {
-      background: #9B9BA1;
-      padding: 7px 10px;
-      border-radius: 10px;
-      color: #ffffff;
-    }
-    .container {
-      width: 100%;
-      height: calc(100vh - 90px);
-      /*background: blue;*/
-    }
-    .bal {
-      height: 200px;
-      /*background: red;*/
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .balance {
-      font-size: 70px;
-    }
-    .balance::before {
-      content: '$';
-    }
-    .address {
-      font-size: 18px;
-      color: #9B9BA1;
-    }
-    .options {
-      /*background: green;*/
-      width: 100%;
-      height: 250px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .op {
-      width: 115px;
-      height: 115px;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      margin: 7px;
-    }
-    .op > i {
-      padding: 10px;
-    }
-    .history-card {
-      width: 100%;
-      height: 300px;
-      /*background: white;
-      margin-top: 50px;*/
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-    }
-    .history {
-      background: white;
+    .senderPanel {
       width: 89%;
-      height: 120px;
+      height: 350px;
       border-radius: 10px;
-    }
-    .hide {
-      display: none;
-    }
-    .sidebar {
-      height: 100vh;
-      width: 300px;
-      background: rgba(185, 186, 195, 0.9);
+      background: rgba(185, 186, 195, 1);
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      
-    }
-    .close {
-      font-size: 60px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
       padding: 20px;
-    }
-    .red {
-      color: red;
-    }
-    .green {
-      color: green;
     }
   </style>
 </head>
@@ -134,7 +36,7 @@
       <h3 class="address">ABDU...NSOLE</h3>
     </section>
     <section class="options">
-      <div class="op green minusFive">
+      <div class="op green send">
         <i class="fas fa-arrow-up"></i>
         <p>Send</p>
       </div>
@@ -168,50 +70,57 @@
     <i class="fas fa-close close"></i>
   </div>
   
-  
-  
-  <p>
-  <input type="number" placeholder="Enter any amount" class="anyAmount">
-  <button class="anyBtn">Submit</button>
-  </p>
+  <div class="senderPanel hide">
+    <i class="fas fa-close closeSender"></i><br>
+    
+    <input type="number" placeholder="Enter any amount" class="anyAmount">
+    
+    <button class="anyBtn">Submit</button>
+  </div>
   
   <script>
   // VARIABLE VALUES
-    var setBalance = 92700.0;
+    var setBalance = 1200.0;
     
   // VARIABLE DECLARATIONS
     var balance = document.querySelector('.balance');
     var addFive = document.querySelector('.addFive');
-    var minusFive = document.querySelector('.minusFive');
+    var send = document.querySelector('.send');
     var anyBtn = document.querySelector('.anyBtn');
     var anyAmount = document.querySelector('.anyAmount');
     var close = document.querySelector('.close');
     var sb = document.querySelector('.sidebar');
     var menuBar = document.querySelector('.menu');
+    var senderPanel = document.querySelector('.senderPanel');
+    var closeSender = document.querySelector('.closeSender');
   
   // SET DISPLAY
     balance.textContent = cashFormat(setBalance);
   
   // SET EVENT LISTENER
     addFive.addEventListener('click', addFiveToBalance);
-    minusFive.addEventListener('click', subtract5Bal);
+    send.addEventListener('click', send_);
     anyBtn.addEventListener('click', addAnyAmount);
     close.addEventListener('click', menuClose);
     menuBar.addEventListener('click', menuShow);
+    closeSender.addEventListener('click', senderClose);
+    
   
   // DEFINE FUNCTIONS
     function addFiveToBalance() {
-      setBalance += 5;
-      balance.textContent = cashFormat(setBalance);
+      //setBalance += 5;
+      //balance.textContent = cashFormat(setBalance);
+      //senderPanel.classList.remove('hide');
     }
     
-    function subtract5Bal() {
-      if (setBalance > 0 && setBalance >= 5) {
+    function send_() {
+      /*if (setBalance > 0 && setBalance >= 5) {
         setBalance -= 5;
         balance.textContent = cashFormat(setBalance);
       } else {
         alert('balance is zero already.');
-      }
+      }*/
+      senderPanel.classList.remove('hide');
     }
     
     function addAnyAmount() {
@@ -236,6 +145,10 @@
     
     function menuClose() {
       sb.classList.add('hide');
+    }
+    
+    function senderClose() {
+      senderPanel.classList.add('hide');
     }
   </script>
 </body>
