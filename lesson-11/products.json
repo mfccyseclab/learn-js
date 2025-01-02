@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Leather Shoes",
+    "price": 25000,
+    "couponCode": "SHOE20",
+    "image": "image/shoe.png"
+  },
+  {
+    "name": "Wireless Earbuds",
+    "price": 15000,
+    "couponCode": "EARBUD15",
+    "image": "image/earbud.png"
+  },
+  {
+    "name": "Smart Watch",
+    "price": 18000,
+    "couponCode": "WATCH10",
+    "image": "image/smart-watch.png"
+  },
+  {
+    "name": "Gaming Mouse",
+    "price": 9000,
+    "couponCode": "MOUSE5",
+    "image": "image/gaming_mouse.png"
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "price": 16000,
+    "couponCode": "SPEAKER25",
+    "image": "image/bluetooth-speaker.png"
+  },
+  {
+    "name": "Laptop Backpack",
+    "price": 15000,
+    "couponCode": "BACKPACK30",
+    "image": "image/laptop_backpack.png"
+  }
+]

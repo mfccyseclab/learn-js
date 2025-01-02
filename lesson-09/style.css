@@ -1,0 +1,195 @@
+:root {
+    --primary-color: #ffa600a4;
+    --secondary-color: #05ab4575;
+    --background-color: #bbcdd680;
+    --background-color2: #28a745;
+    --bg2-linear-gradient: linear-gradient(to right, #05ab45, #43be7a, #0b6526);
+    --primary-text-color: #28363E;
+    --primary-text-color2: #eef2f4d2;
+    --secondary-text-color: #FFFFFF;
+    --text-muted-color: #494949;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --highlight-color: #006004;
+    --text-color: #ffffff;
+    --link-color: #ffa500;
+    --link-hover-color: #014625;
+    --btn-background-color: #28a7467d;
+    --btn-hover-background-color: #218838;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: var(--background-color);
+    margin-bottom: -5px;
+}
+
+/*** Beginning of Content of Hero Section ***/
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    padding: 2rem;
+    animation: slideIn 1100ms ease-in-out;
+}
+.hero-title {
+    font-size: 2.5rem;
+    color: var(--primary-text-color);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.hero-title span span {
+    background-image: var(--bg2-linear-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.animate-text {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.animate-text:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*** End of Content of Hero Section ***/
+
+/*** Beginning of Background Ani ***/
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.shape {
+    position: absolute;
+    opacity: 0.1;
+}
+.shape1 {
+    top: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--background-color2);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: rotate 20s infinite linear;
+}
+.shape2 {
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background-color: #007bff;
+    clip-path: circle(50% at 50% 50%);
+    animation: pulse 15s infinite alternate;
+}
+.shape3 {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #502196;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: float 10s infinite ease-in-out;
+}
+.shape4 {
+    top: 80%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background-color: #3f1963;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: slideIn 2s infinite;
+}
+.shape5 {
+    bottom: 400px;
+    right: -120px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--background-color2);
+    clip-path: circle(50% at 50% 50%);
+    animation: pulse 15s infinite alternate;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+@keyframes float {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -60%);
+    }
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/*** End of Background Ani ***/
+
+.btn {
+  padding: 10px;
+}
+.order, .truck {
+  width: 60px;
+  height: 41px;
+  left: 100%;
+  z-index: 11;
+  position: absolute;
+  transform: translateX(24px);
+}
+.order {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: #000; /* var(--dark) */
+  position: relative;
+  height: 63px;
+  width: 240px;
+  padding: 0;
+  outline: none;
+  border-radius: 32px;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}

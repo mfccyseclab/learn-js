@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#message {
+  font-size: 3rem;
+  text-align: center;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+  </style>
+</head>
+<body>
+  <div id="message" class="hidden">🎉 Happy New Year! 🎉</div>
+  <canvas id="confettiCanvas"></canvas>
+  <script>
+
+const canvas = document.getElementById("confettiCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const confettiCount = 300;
+const confettiColors = ["#ff0", "#f0f", "#0ff", "#0f0", "#f00", "#00f"];
+const confetti = Array.from({ length: confettiCount }).map(() => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height - canvas.height,
+  r: Math.random() * 6 + 2,
+  color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+  speed: Math.random() * 3 + 2,
+  angle: Math.random() * 2 * Math.PI,
+}));
+
+function drawConfetti() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  confetti.forEach((c) => {
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, c.r, 0, 2 * Math.PI);
+    ctx.fillStyle = c.color;
+    ctx.fill();
+  });
+}
+
+function updateConfetti() {
+  confetti.forEach((c) => {
+    c.y += c.speed;
+    c.x += Math.sin(c.angle) * 2;
+    if (c.y > canvas.height) c.y = -c.r;
+  });
+}
+
+function loop() {
+  drawConfetti();
+  updateConfetti();
+  requestAnimationFrame(loop);
+}
+
+loop();
+
+setTimeout(() => {
+  document.getElementById("message").classList.remove("hidden");
+  document.getElementById("message").style.display = "block";
+  canvas.style.display = "none";
+}, 5000);
+
+  </script>
+</body>
+</html>

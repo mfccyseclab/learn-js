@@ -6,3 +6,4 @@ btn.addEventListener('click', check);
 function check() {
   alert('Product');
 }
+

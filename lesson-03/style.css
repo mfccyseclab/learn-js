@@ -27,6 +27,36 @@ body{
     align-items: center;
     
 }
+/*****
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f3f3f3;
+}
+*****/
+.time-container {
+  display: flex;
+  gap: 20px;
+}
+
+.time-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
 nav {
   padding: 10px 20px;
