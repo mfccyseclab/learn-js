@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #F7FCFF;
   color: #333;
   line-height: 1.6;
 }
@@ -61,6 +61,7 @@ header {
   margin: 16px;
   width: 300px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
 .product-card img {
@@ -83,7 +84,7 @@ header {
 
 .product-price {
   font-size: 16px;
-  color: green;
+  color: #007bff;
 }
 
 .coupon-section {
@@ -101,7 +102,7 @@ header {
 
 .buy-btn {
   padding: 8px 16px;
-  background-color: green;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 4px;
@@ -127,4 +128,13 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
