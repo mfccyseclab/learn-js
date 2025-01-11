@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header with Balance -->
+    <header>
+      <h1>My Finance</h1>
+      <div class="balance-display">
+        <strong>Balance:</strong> ₦<span id="currentBalance">0.00</span>
+      </div>
+    </header>
+
+    <!-- Main Options -->
+    <div class="options">
+      <div class="option-card" id="viewBalance">
+        <i class="fas fa-wallet"></i>
+        <h3>View Balance</h3>
+      </div>
+      <div class="option-card" id="addIncome">
+        <i class="fas fa-plus-circle"></i>
+        <h3>Add Income</h3>
+      </div>
+      <div class="option-card" id="addExpense">
+        <i class="fas fa-minus-circle"></i>
+        <h3>Add Expense</h3>
+      </div>
+      <div class="option-card" id="viewExpenses">
+        <i class="fas fa-list"></i>
+        <h3>View Expenses</h3>
+      </div>
+      <div class="option-card" id="exitApp">
+        <i class="fas fa-sign-out-alt"></i>
+        <h3>Exit</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
