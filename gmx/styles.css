@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    overflow: hidden;
 }
 
 header {
@@ -248,4 +249,20 @@ button:hover {
 
 .hide {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .more {
+    font-size: 16px;
+    gap: 15px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  header {
+    width: 100%;
+    padding: 10px 5px;
+  }
 }
